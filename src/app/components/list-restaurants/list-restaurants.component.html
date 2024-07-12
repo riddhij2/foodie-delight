@@ -1,0 +1,8 @@
+<h2>Restaurants</h2>
+<button routerLink="/add-restaurant">Add New Restaurant</button>
+<div *ngIf="restaurants.length > 0; else noRestaurants">
+  <app-restaurant-item *ngFor="let restaurant of restaurants" [restaurant]="restaurant" (delete)="onDelete($event)"></app-restaurant-item>
+</div>
+<ng-template #noRestaurants>
+  <p>No restaurants available.</p>
+</ng-template>

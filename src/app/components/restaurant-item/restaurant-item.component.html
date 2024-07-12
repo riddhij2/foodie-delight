@@ -1,0 +1,11 @@
+<div class="restaurant-item">
+    <h3>{{ restaurant.name }}</h3>
+    <p>{{ restaurant.description }}</p>
+    <p><strong>Location:</strong> {{ restaurant.location }}</p>
+    <p><strong>Contact:</strong> {{ restaurant.contact }}</p>
+    <p><strong>Operating Hours:</strong> {{ restaurant.operatingHours }}</p>
+    <p><strong>Cuisine Type:</strong> {{ restaurant.cuisineType }}</p>
+    <button routerLink="/edit-restaurant/{{ restaurant.id }}">Edit</button>
+    <button (click)="deleteRestaurant()">Delete</button>
+  </div>
+  

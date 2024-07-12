@@ -1,0 +1,16 @@
+<h2>Edit Restaurant</h2>
+<form [formGroup]="restaurantForm" (ngSubmit)="onSubmit()">
+  <label for="name">Name:</label>
+  <input id="name" formControlName="name">
+  <label for="description">Description:</label>
+  <textarea id="description" formControlName="description"></textarea>
+  <label for="location">Location:</label>
+  <input id="location" formControlName="location">
+  <label for="contact">Contact:</label>
+  <input id="contact" formControlName="contact">
+  <label for="operatingHours">Operating Hours:</label>
+  <input id="operatingHours" formControlName="operatingHours">
+  <label for="cuisineType">Cuisine Type:</label>
+  <input id="cuisineType" formControlName="cuisineType">
+  <button type="submit" [disabled]="!restaurantForm.valid">Update Restaurant</button>
+</form>
